@@ -3,11 +3,7 @@
 
 name: Node.js CI
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: [workflow_dispatch]
 
 jobs:
   build:
@@ -37,6 +33,3 @@ jobs:
 
       - name: Build
         run: npm run build-prod
-
-      - name: Deploy to RequestAfrica
-        run: rsync -av -e ssh  -r dist/*  requestafricadev@request.africa:/home/requestafricadev/apps/somdash
