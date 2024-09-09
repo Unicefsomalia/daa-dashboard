@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>Translate to {{instance?.language}}</h3>
+
+  <div>
+    <span>{{instance?.original}}</span>
+  </div>
+  <app-myform [extraFields]="extra_fields" [formItems]="formItems" [url]="url"
+    (onValidatedData)="onValidatedData($event)" [submitButtonText]='"Locale Text"' [formGroupOrder]="formGroupOrder"
+    [hideButtons]=false (onPostedData)="onPostedData($event)" [instance]="instance">
+  </app-myform>
+</div>

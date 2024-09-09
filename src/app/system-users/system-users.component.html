@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-title mt-3">View System Users</h1>
+            <!-- <app-myform [formItems]="formItems" [url]="url" submitButtonText="Search" isValidationOnly=true
+                (onValidatedData)="onValidatedData($event)" componentType="filter" formActionName="Search"
+                submitButtonText="" [formGroupOrder]="formGroupOrder">
+            </app-myform> -->
+        </div>
+    </div>
+    <hr />
+    <my-app-tables searchFieldName="username" searchFieldNameMessage="Username"
+        (exportTriggered)="exportTriggerd($event)" (isLoading)="isLoading($event)" [showNumbering]="false"
+        (onLengthLoaded)="onLengthLoaded($event)" [listTypeUrl]="url" [args]="args"
+        (actionsEvent)="handleActions($event)" page_size="10" [headers]="headers" enableDelete="false"
+        enableEdit="false">
+    </my-app-tables>
+
+</div>

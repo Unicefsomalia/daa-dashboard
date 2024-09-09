@@ -1,0 +1,10 @@
+<div class="container">
+
+    <h1 class="page-title mt-3">View Classes</h1>
+    <my-app-tables [enableOrderBy]="true" searchFieldName="school_name" searchFieldNameMessage="School Name"
+        [enableEdit]="'true'" [enableDelete]="'true'" [args]="args" listTypeUrl="api/v1/streams" page_size="10"
+        [showNumbering]="false" [headers]="headers" (actionsEvent)="handleActions($event)"
+        deleteFieldDisplayField="@full_class_name">
+    </my-app-tables>
+
+</div>

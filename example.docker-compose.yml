@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  dash:
+    image: michameiu/somdash:v1.0.1.arm # Location with a Dockerfile
+    restart: always
+
+    ports:
+      - 8990:80
+  
+
+  
+volumes:
+  pg:
+  media:
+  static:

@@ -1,0 +1,23 @@
+<div class="container">
+    <app-welcome-banner></app-welcome-banner>
+
+    <sistch-dashboard-builder [dataMap]="dataMap" [dashboardBuilderOptions]="dashboardBuilderOptions">
+
+        <sistch-data-card [preChartDataFunctions]="[statsTotalFunction]" [cardsDetails]="cardDetails" dataKey="stats">
+        </sistch-data-card>
+
+
+        <select nav-item [(ngModel)]="statsDuration" (ngModelChange)="routeToNewPage()" class="form-select" id="exampleSelect">
+        
+            <option *ngFor="let item of durationsMap" value={{item.value}}>{{item.display_name}}</option>
+            <!-- <option value=14>2 Weeks Ago</option>
+                            <option value=30>1 Month Ago</option>
+                            <option value=90>3 Month Ago</option>
+                            <option value=180>6 Month Ago</option>
+                            <option value=365>1 Year Ago</option> -->
+        </select>
+
+
+    </sistch-dashboard-builder>
+
+</div>

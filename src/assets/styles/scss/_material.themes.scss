@@ -1,0 +1,8 @@
+// Default Theme
+@use '@angular/material' as mat;
+@include mat.all-component-themes($theme);
+
+// Dark Theme
+.app-dark {
+  @include mat.all-component-themes($dark-theme);
+}

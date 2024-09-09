@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-end partner-class">
+            <a href="/settings/add-partners">
+                <button mat-raised-button color="primary" type="submit">Add Partner <mat-icon>add</mat-icon>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <my-app-tables [enableOrderBy]="true" searchFieldName="name" searchFieldNameMessage="Partner Name"
+        (exportTriggered)="exportTriggerd($event)" (isLoading)="isLoading($event)" [showNumbering]="false"
+        (onLengthLoaded)="onLengthLoaded($event)" [listTypeUrl]="url" [args]='args'
+        (actionsEvent)="handleActions($event)" page_size="10" [headers]="headers">
+    </my-app-tables>
+
+
+</div>
